@@ -1,0 +1,31 @@
+work = input("Рассчитать число подходов? ")
+if work=="да" or work=="yes" or work=="Да":
+  amount = int(input("Общее количество? "));
+  start = int(input("Стартовое количество? "))
+  step = int(input("Количество повторений? "))
+  kind = input("Тип упражнения? ")
+  total = amount-start
+  count = 1
+  if kind=="лесенка":
+    while total>0:
+      step += 1
+
+      total -= step
+      count += 1
+  
+    print("Количество подходов", count)
+  else:
+
+    countster = ((amount-start)//step)+1
+    print("Количество подходов", countster)
+else:
+  print("Рассчитываем общее количество подтягиваний")
+  start = int(input("Стартовое количество повторений? "))
+  step = int(input("Шаг увеличения? "))
+  count = int(input("Количество подходов? "))
+  amount = start
+
+  for i in range(count-1):
+     start += step
+     amount += start
+  print("Общее количество подтягиваний", amount)
