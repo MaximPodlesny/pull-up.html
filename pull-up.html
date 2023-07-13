@@ -1,37 +1,34 @@
-Up line
-work = input("���������� ����� ��������? ")
-if work=="��" or work=="yes" or work=="��":
-  amount = int(input("����� ����������? "));
-  start = int(input("��������� ����������? "))
-  step = int(input("���������� ����������? "))
-  kind = input("��� ����������? ")
+work = input("Рассчитать число подходов? ")
+if work=="да" or work=="yes" or work=="Да":
+  amount = int(input("Общее количество? "));
+  start = int(input("Стартовое количество? "))
+  step = int(input("Количество повторений? "))
+  kind = input("Тип упражнения? ")
   total = amount-start
   count = 1
-  if kind=="�������":
+  if kind=="лесенка":
     while total>0:
       step += 1
 
       total -= step
       count += 1
   
-    print("���������� ��������", count)
+    print("Количество подходов", count)
   else:
 
     countster = ((amount-start)//step)+1
-    print("���������� ��������", countster)
+    print("Количество подходов", countster)
 else:
-  print("������������ ����� ���������� ������������")
-  start = int(input("��������� ���������� ����������? "))
-  step = int(input("��� ����������? "))
-  count = int(input("���������� ��������? "))
+  print("Рассчитываем общее количество подтягиваний")
+  start = int(input("Стартовое количество повторений? "))
+  step = int(input("Шаг увеличения? "))
+  count = int(input("Количество подходов? "))
   amount = start
 
   for i in range(count-1):
      start += step
      amount += start
-  print("����� ���������� ������������", amount)
-
-New feature
+  print("Общее количество подтягиваний", amount)
 
 l = []
 for _ in range(int(input())):
