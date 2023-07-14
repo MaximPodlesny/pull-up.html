@@ -1,50 +1,48 @@
-Up line
-work = input("Рассчитать число подходов? ")
-if work=="да" or work=="yes" or work=="Да":
-  amount = int(input("Общее количество? "));
-  start = int(input("Стартовое количество? "))
-  step = int(input("Количество повторений? "))
-  kind = input("Тип упражнения? ")
-  total = amount-start
-  count = 1
-  if kind=="лесенка":
-    while total>0:
-      step += 1
+work = input("Р Р°СЃСЃС‡РёС‚Р°С‚СЊ С‡РёСЃР»Рѕ РїРѕРґС…РѕРґРѕРІ? ")
+if work=="РґР°" or work=="yes" or work=="Р”Р°":
+amount = int(input("РћР±С‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ? "));
+start = int(input("РЎС‚Р°СЂС‚РѕРІРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ? "))
+step = int(input("РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРІС‚РѕСЂРµРЅРёР№? "))
+kind = input("РўРёРї СѓРїСЂР°Р¶РЅРµРЅРёСЏ? ")
+total = amount-start
+count = 1
+if kind=="Р»РµСЃРµРЅРєР°":
+while total>0:
+step += 1
 
-      total -= step
-      count += 1
-  
-    print("Количество подходов", count)
-  else:
+total -= step
+count += 1
 
-    countster = ((amount-start)//step)+1
-    print("Количество подходов", countster)
+print("РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРґС…РѕРґРѕРІ", count)
 else:
-  print("Рассчитываем общее количество подтягиваний")
-  start = int(input("Стартовое количество повторений? "))
-  step = int(input("Шаг увеличения? "))
-  count = int(input("Количество подходов? "))
-  amount = start
 
-  for i in range(count-1):
-     start += step
-     amount += start
-  print("Общее количество подтягиваний", amount)
+countster = ((amount-start)//step)+1
+print("РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРґС…РѕРґРѕРІ", countster)
+else:
+print("Р Р°СЃСЃС‡РёС‚С‹РІР°РµРј РѕР±С‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРґС‚СЏРіРёРІР°РЅРёР№")
+start = int(input("РЎС‚Р°СЂС‚РѕРІРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРІС‚РѕСЂРµРЅРёР№? "))
+step = int(input("РЁР°Рі СѓРІРµР»РёС‡РµРЅРёСЏ? "))
+count = int(input("РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРґС…РѕРґРѕРІ? "))
+amount = start
 
-New feature
+for i in range(count-1):
+start += step
+amount += start
+print("РћР±С‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРґС‚СЏРіРёРІР°РЅРёР№", amount)
 
+# comment
 l = []
 for _ in range(int(input())):
-    l.append(input())
+l.append(input())
 
 k = []
 g = int(input())
 for _ in range(g):
-    k.append(input())
+k.append(input())
 
 for i in l:
-    for g in k:
-        if g not in i:
-            breack
-    else:
-        print(i)
+for g in k:
+if g not in i:
+breack
+else:
+print(i)
